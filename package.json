@@ -18,5 +18,10 @@
   },
   "devDependencies": {
 
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henrytseng/node-resource"
+  },
+  "homepage": "https://github.com/henrytseng/node-resource"
 }
