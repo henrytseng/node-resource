@@ -1,6 +1,8 @@
 node-resource
 =============
 
+[![Join the chat at https://gitter.im/henrytseng/node-resource](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/henrytseng/node-resource?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Absolute folder structure to access components.  
 
 Use the environment variable ```RESOURCE_BASE_PATH``` to set the base path, otherwise, the default uses ```process.cwd()```.  
