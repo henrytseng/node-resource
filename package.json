@@ -1,7 +1,7 @@
 {
   "name": "node-resource",
   "description": "A module loader that uses absolute paths",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Henry Tseng",
     "email": "contact@henrytseng.com"

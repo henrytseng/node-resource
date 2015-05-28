@@ -3,7 +3,7 @@ node-resource
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/henrytseng/node-resource?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-[![Build Status](https://travis-ci.org/henrytseng/node-resource.svg)](https://travis-ci.org/henrytseng/node-resource)
+[![Build Status](https://travis-ci.org/henrytseng/node-resource.svg?branch=master)](https://travis-ci.org/henrytseng/node-resource)
 
 Absolute folder structure to access components.  
 
