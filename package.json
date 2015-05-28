@@ -1,12 +1,16 @@
 {
   "name": "node-resource",
   "description": "A module loader that uses absolute paths",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "author": {
     "name": "Henry Tseng",
     "email": "contact@henrytseng.com"
   },
   "main": "lib/resource.js",
+  "scripts": {
+    "watch": "mocha -w tests/*.spec.js",
+    "test": "mocha tests/*.spec.js"
+  },
   "directories": {
     "lib": "./lib"
   },
@@ -17,7 +21,7 @@
 
   },
   "devDependencies": {
-
+    "mocha": "~2.0.1"
   },
   "repository": {
     "type": "git",
