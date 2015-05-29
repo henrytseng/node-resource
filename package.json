@@ -1,7 +1,7 @@
 {
   "name": "node-resource",
   "description": "A module loader that uses absolute paths",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "Henry Tseng",
     "email": "contact@henrytseng.com"
@@ -23,6 +23,15 @@
   "devDependencies": {
     "mocha": "~2.0.1"
   },
+  "license": "MIT",
+  "keywords": [
+    "components",
+    "modules",
+    "namespaces",
+    "manager",
+    "resources",
+    "organizer"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/henrytseng/node-resource"

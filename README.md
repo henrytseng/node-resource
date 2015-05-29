@@ -49,3 +49,7 @@ If you'd like to resolve paths according to the namespace you can still use `Res
 
 This has been especially useful in larger projects with multiple teams where allocation of git repositories were necessary to divide and conquer. 
 
+
+## LICENSE
+
+MIT
