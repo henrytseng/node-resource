@@ -1,11 +1,21 @@
-node-resource
-=============
+Resource
+========
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/henrytseng/node-resource?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 [![Build Status](https://travis-ci.org/henrytseng/node-resource.svg?branch=master)](https://travis-ci.org/henrytseng/node-resource)
 
-Absolute folder structure to access components.  
+A module loading manager.  
+
+The module subsystem API is will remain the same for some time to come in Node.  
+
+`Resource` provides a way to manage modules in namespaces and invalidate module cache for testing.  
+
+Remember that modules loaded using `require` are specific and register as different modules according to their location.  
+
+> For example, require('./foo') and require('./FOO') return two different objects, irrespective of whether or not ./foo and ./FOO are the same file.
+
+`Resource` simplifies loading modules by using `process.cwd()` and `require.resolve` to build absolute folder structure to access components.  
 
 Use the environment variable ```RESOURCE_BASE_PATH``` to set the base path, otherwise, the default uses ```process.cwd()```.  
 
@@ -20,12 +30,12 @@ To install:
 Load a module according to execution environment's current working directory
 
 	var Resource = require('node-resource');
-	var MyModule = Resource('relative/path');
+	var MyModule = Resource('relative/path/to/module');
 
 Get the absolute path according to execution environment from the current working folder `process.cwd`
 
 	var Resource = require('node-resource');
-	var absolutePathModule = Resource.resolve('relative/path');
+	var absolutePathModule = Resource.resolve('relative/path/to/module');
 
 
 ## Namespaces
