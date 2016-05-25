@@ -22,7 +22,7 @@ Load a module according to execution environment's current working directory
 	var Resource = require('node-resource');
 	var MyModule = Resource('relative/path');
 
-Get the absolute path according to execution environment
+Get the absolute path according to execution environment from the current working folder `process.cwd`
 
 	var Resource = require('node-resource');
 	var absolutePathModule = Resource.resolve('relative/path');
@@ -50,6 +50,22 @@ If you'd like to resolve paths according to the namespace you can still use `Res
 This has been especially useful in larger projects with multiple teams where allocation of git repositories were necessary to divide and conquer. 
 
 
-## LICENSE
+# Cache
 
-MIT
+Modules in Node.js are stored in memory and reside in `require.cache` after the first load.  Subsequent calls to access the module use the cached version.  
+
+To remove the cached instance use 
+
+	var Foo = Resource('path/to/my/module');
+	Resource.reset('path/to/my/module');
+
+Or reset only a collection of namespaced modules.  
+
+	Resource.common.reset();
+
+Remember that since `Resource` uses the absolute path with respect to the module a reference to the same module from outside the namespace affects the same module since namespaces are organized through the module's path.  
+
+
+# Contribution
+
+Contributions are welcome but only when the features lend to the direction of the project.  Please make sure to stick to current coding styles and conventions.  
