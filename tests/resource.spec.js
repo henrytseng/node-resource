@@ -15,6 +15,38 @@ describe('Resource', function() {
 
   });
 
+  describe('#reset', function() {
+    
+    it('Should instantiate module and remove it from module cache', function(done) {
+      var ResourceModule = require('../lib/resource');
+      ResourceModule.value = 'set';
+
+      assert.equal(ResourceModule.value, 'set');
+
+      ResourceModule.reset('../lib/resource');
+      ResourceModule = require('../lib/resource');
+
+      assert.notEqual(ResourceModule.value, 'set');
+
+      done();
+    });
+    
+    it('Should instantiate module and clear all cache', function(done) {
+      var ResourceModule = require('../lib/resource');
+      ResourceModule.value = 'set';
+
+      assert.equal(ResourceModule.value, 'set');
+
+      ResourceModule.reset();
+      ResourceModule = require('../lib/resource');
+
+      assert.notEqual(ResourceModule.value, 'set');
+
+      done();
+    });
+
+  });
+
   describe('#namespace', function() {
     it('Should not allow namespace reserved names', function(done) {
       var Resource = require('../lib/resource');
